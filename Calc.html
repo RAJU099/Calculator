@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script> 
+        //function that display value 
+        function dis(val) 
+        { 
+            document.getElementById("result").value+=val 
+        } 
+          
+        //function that evaluates the digit and return result 
+        function solve() 
+        { 
+            let x = document.getElementById("result").value 
+            let y = eval(x) 
+            document.getElementById("result").value = y 
+        } 
+          
+        //function that clear the display 
+        function clr() 
+        { 
+            document.getElementById("result").value = "" 
+        } 
+     </script>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+       
+
+        <div class="col-4 offset-4">
+            
+             <!-- calculator using btn groups -->
+            <div class="btn-group-vertical my-4" role="group" aria-label="Basic example">
+                <input type="text" id="result" value="" disabled style="
+                width: 100%;
+                height: 6rem;
+                background-color: #fff;
+                text-align: right;
+                font-size: 4em;
+                border:1 px solid black;
+                color: #252525;"/>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-muted border-bottom-0 rounded-0" onclick="clr()">C</button>
+                    <button type="button" class="btn btn-outline-muted border-bottom-0">±</button>
+                    <button type="button" class="btn btn-outline-muted border-bottom-0 rounded-0" onclick="dis('%')">%</button>
+                    <button type="button" class="btn btn-dark border-bottom-0 rounded-0" onclick="dis('/')">÷</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light text-dark border-bottom-0 rounded-0" value="7" onclick="dis('7')">7</button>
+                    <button type="button" class="btn btn-outline-light text-dark border-bottom-0" value="8" onclick="dis('8')">8</button>
+                    <button type="button" class="btn btn-outline-light text-dark border-bottom-0 rounded-0"onclick="dis('9')">9</button>
+                    <button type="button" class="btn btn-dark border-bottom-0 rounded-0" value="*" onclick="dis('*')">×</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light text-dark border-bottom-0 rounded-0" onclick="dis('4')">4</button>
+                    <button type="button" class="btn btn-outline-light text-dark border-bottom-0" onclick="dis('5')">5</button>
+                    <button type="button" class="btn btn-outline-light text-dark border-bottom-0 rounded-0" onclick="dis('6')">6</button>
+                    <button type="button" class="btn btn-dark border-bottom-0 rounded-0" value="+" onclick="dis('-')">-</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light text-dark rounded-0" onclick="dis('1')">1</button>
+                    <button type="button" class="btn btn-outline-light text-dark" onclick="dis('2')">2</button>
+                    <button type="button" class="btn btn-outline-light text-dark rounded-0" onclick="dis('3')">3</button>
+                    <button type="button" class="btn btn-dark border-bottom-0 rounded-0" onclick="dis('+')">+</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light text-dark rounded-0" onclick="dis('0')">0</button>
+                    <button type="button" class="btn btn-outline-light text-dark"></button>
+                    <button type="button" class="btn btn-outline-light text-dark rounded-0" onclick="dis('.')">.</button>
+                    <button type="button" class="btn btn-warning text-light rounded-0" value="=" onclick="solve()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/row-->
+</div>
+</body>
+</html>
